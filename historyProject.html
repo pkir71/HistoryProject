@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+        <link rel="stylesheet" type="text/css" href="historyProject.css">
+
+                        <script>
+
+                            
+                            function main()
+                            {
+                                var A;
+                                A = document.getElementById("A").value;
+                                document.getElementById("C").value = encode(A);
+                                
+                            
+                            }
+                            
+                            
+                            function main2 ()
+                            {
+                                var C;
+                                C = document.getElementById("C").value;
+                                document.getElementById("A").value = decode(C);
+                            }
+                            
+                            
+
+                            
+                            
+                                /*
+                            *****************************************************************
+                            *****************************************************************
+                            */
+                                function decode(inp)
+                                {
+                                    let outp= [];
+                                    var ii=0;
+                                    var i;
+                                    for(i=0; i<inp.length; i++)
+                                    {
+                                        switch(inp[i])
+                                        {
+                                            case 'η':
+                                                outp[ii]='α';
+                                                break;
+                                                
+                                            case 'ξ':
+                                                outp[ii]='β';
+                                                break;
+                                                
+                                            case 'υ':
+                                                outp[ii]='γ';
+                                                break;
+                                                
+                                            case 'ψ':
+                                                outp[ii]='δ';
+                                                break;
+                                                
+                                            case 'ω':
+                                                outp[ii]='ε';
+                                                break;
+                                                
+                                            case '1':
+                                                outp[ii]='ζ';
+                                                break;
+                                                
+                                            case '2':
+                                                outp[ii]='θ';
+                                                break;
+                                                
+                                            case '3':
+                                                outp[ii]='ι';
+                                                break;
+                                                
+                                            case '5':
+                                                outp[ii]='λ';
+                                                break;
+                                                
+                                            case '6':
+                                                outp[ii]='μ';
+                                                break;
+                                                
+                                            case '7':
+                                                outp[ii]='ν';
+                                                break;
+                                                                            
+                                            case '8':
+                                                outp[ii]='ο';
+                                                break;
+                                                
+                                                
+                                            case 'ο':
+                                                outp[ii]='ρ';
+                                                break;
+                                                
+                                            case 'α':
+                                                outp[ii]='σ';
+                                                break;
+                                                
+                                            case 'β':
+                                                outp[ii]='τ';
+                                                break;
+                                                
+                                            case 'γ':
+                                                outp[ii]='φ';
+                                                break;
+                                                
+                                            case 'δ':
+                                                outp[ii]='χ';
+                                                break;
+                                                
+                                            case 'ε':
+                                                outp[ii]='ω';
+                                                break;
+                                                                                                    
+                                                
+                                            case '4':
+                                                if(inp[i+1]=='α') {outp[ii]='ξ'; ++i;}
+                                                else {outp[ii]='κ';}
+                                                break;
+                                                
+                                            case '9':
+                                                if(inp[i+1]=='α') {outp[ii]='ψ'; ++i;}
+                                                else {outp[ii]='π';}
+                                                break;
+                                                                                                    
+                                            default:
+                                                outp[ii]='?';
+                                                break;
+                                        }
+                                        ++ii;					
+                                    }
+                                    return outp.join('');
+                                }
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                function encode(inp)
+                                {
+                                    let outp= [];
+                                    var ii=0;
+                                    var i;
+                                
+                                    for(i=0; i<inp.length; i++)
+                                    {
+                                        switch(inp[i])
+                                        {
+                                            case 'α':
+                                                outp[ii]='η';
+                                                break;
+                                                
+                                            case 'β':
+                                                outp[ii]='ξ';
+                                                break;
+                                                
+                                            case 'γ':
+                                                outp[ii]='υ';
+                                                break;
+                                                
+                                            case 'δ':
+                                                outp[ii]='ξ';
+                                                break;
+                                                
+                                            case 'ε':
+                                                outp[ii]='ω';
+                                                break;
+                                                
+                                            case 'ζ':
+                                                outp[ii]='1';
+                                                break;
+                                                
+                                            case 'θ':
+                                                outp[ii]='2';
+                                                break;
+                                                
+                                            case 'ι':
+                                                outp[ii]='3';
+                                                break;
+                                                
+                                            case 'λ':
+                                                outp[ii]='5';
+                                                break;
+                                                
+                                            case 'μ':
+                                                outp[ii]='6';
+                                                break;
+                                                
+                                            case 'ν':
+                                                outp[ii]='7';
+                                                break;
+                                                                            
+                                            case 'ο':
+                                                outp[ii]='8';
+                                                break;
+                                                
+                                                
+                                            case 'ρ':
+                                                outp[ii]='ο';
+                                                break;
+                                                
+                                            case 'σ':
+                                                outp[ii]='α';
+                                                break;
+                                                
+                                            case 'τ':
+                                                outp[ii]='β';
+                                                break;
+                                                
+                                            case 'γ':
+                                                outp[ii]='φ';
+                                                break;
+                                                
+                                            case 'χ':
+                                                outp[ii]='δ';
+                                                break;
+                                                
+                                                case 'φ':
+                                                outp[ii]='γ';
+                                                break;
+                                                
+                                            case 'ω':
+                                                outp[ii]='ε';
+                                                break;
+                                                
+                                                case 'κ':
+                                                outp[ii]='4';
+                                                break;
+                                                    
+                                            case 'π':
+                                                outp[ii]='9';
+                                                break;								
+                                                
+                                            case 'ξ':
+                                                outp[ii] = '4';
+                                                ++ii;
+                                                outp[ii] = 'α';
+                                                break;
+                                                
+                                            case 'ψ':
+                                                outp[ii++] = '9';
+                                                outp[ii] = 'α';
+                                                break;
+                                                                                                    
+                                            default:
+                                                outp[ii]='?';
+                                                break;
+                                        }
+                                        ++ii;					
+                                    }
+                                    return outp.join('');
+                                }
+                                
+                                
+
+                </script>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	</head>
+
+	<body>
+	
+		<label>Ελληνικά:</label>
+		<input type="text" id="A" name="A"><br>
+		<label>Κρυπτογραφημένα:</label>
+		<input type="text" id="C" name="C"><br><br>
+		<button onclick="main()">Μετάφραση σε Κρυπτογραφημένα</button><br><br>
+		<button onclick="main2()">Μετάφραση σε Ελληνικά</button><br><br>
+		
+
+	</body>
+	
+</html>
