@@ -3,8 +3,17 @@
 <html>
 
 	<head>
-
-        <link rel="stylesheet" type="text/css" href="historyProject.css">
+		
+	<style>
+	body{
+	font-family: 'Times New Roman';
+	background: #03264b;
+	}
+	div{
+	margin:  canvas;
+	padding: canvas;
+	}
+	</style>
 
                         <script>
 
@@ -43,6 +52,10 @@
                                     {
                                         switch(inp[i])
                                         {
+										
+											case ' ':
+                                                outp[ii]=' ';
+                                                break;
                                             case 'η':
                                                 outp[ii]='α';
                                                 break;
@@ -152,6 +165,10 @@
                                     {
                                         switch(inp[i])
                                         {
+											case ' ':
+                                                outp[ii]=' ';
+                                                break;
+												
                                             case 'α':
                                                 outp[ii]='η';
                                                 break;
@@ -266,15 +283,14 @@
 	</head>
 
 	<body>
-        <form class="box">
-            <label>Ελληνικά:</label>
-            <input type="text" id="A" name="A"><br>
-            <label>Κρυπτογραφημένα:</label>
-            <input type="text" id="C" name="C"><br><br>
-            <button onclick="main()">Μετάφραση σε Κρυπτογραφημένα</button><br><br>
-            <button onclick="main2()">Μετάφραση σε Ελληνικά</button><br><br>
-        </form>
-
+		<div>
+            <label style = "font-family: 'Times New Roman'; color: #ffffff;">Ελληνικά:</label>
+            <input type="text" id="A" name="A"  style = "border: 0;  background: none; display: block; margin: 20px; text-align: center; border:2px solid aqua; padding: 14px, 10px; width: 200px; outline: none; color: white; border-radius: 24px;">
+            <label style = "font-family: 'Times New Roman'; color: #ffffff;">Κρυπτογραφημένα:</label>
+            <input type="text" id="C" name="C"  style = "border: 0;  background: none; display: block; margin: 20px; text-align: center; border:2px solid aqua; padding: 14px, 10px; width: 200px; outline: none; color: white; border-radius: 24px;">
+            <button onclick="main()"style="border: 0; background: none; display: block; margin: 20px; text-align: center; border:2px solid aqua; padding: 14px, 10px; width: 200px; outline: none; color: white; border-radius: 24px;">Μετάφραση σε Κρυπτογραφημένα</button>
+            <button onclick="main2()"style="border: 0; background: none; display: block; margin: 20px; text-align: center; border:2px solid aqua; padding: 14px, 10px; width: 200px; outline: none; color: white; border-radius: 24px;">Μετάφραση σε Ελληνικά</button>
+		</div>
 	</body>
 	
 </html>
